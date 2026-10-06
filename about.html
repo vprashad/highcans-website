@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | High Cans Corporation Sdn Bhd</title>
+    <style>
+        :root {
+            --primary-color: #1b4d3e;
+            --secondary-color: #cf8a15;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-light: #f9f9f9;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .top-bar {
+            background-color: #222;
+            color: #fff;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .top-bar a {
+            color: #fff;
+            text-decoration: none;
+        }
+        header {
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        .logo h1 {
+            margin: 0;
+            font-size: 24px;
+            color: var(--primary-color);
+            line-height: 1.2;
+        }
+        .logo span {
+            font-size: 14px;
+            display: block;
+            color: var(--text-light);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            position: relative;
+            margin-left: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            padding: 10px 0;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            min-width: 180px;
+            flex-direction: column;
+            padding: 10px 0;
+        }
+        nav ul li:hover ul {
+            display: flex;
+        }
+        nav ul li ul li {
+            margin: 0;
+        }
+        nav ul li ul li a {
+            padding: 8px 20px;
+            display: block;
+            font-weight: normal;
+        }
+        nav ul li ul li a:hover {
+            background: var(--bg-light);
+        }
+        .page-banner {
+            background: linear-gradient(rgba(27, 77, 62, 0.9), rgba(27, 77, 62, 0.9));
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
+        .page-banner h2 {
+            font-size: 32px;
+            margin: 0 0 10px 0;
+        }
+        .breadcrumbs {
+            font-size: 14px;
+            color: #ccc;
+        }
+        .breadcrumbs a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .content-section {
+            padding: 60px 0;
+            background: #fff;
+        }
+        .about-grid {
+            display: flex;
+            gap: 50px;
+            align-items: flex-start;
+        }
+        .main-text {
+            flex: 2;
+        }
+        .experience-box {
+            flex: 1;
+            background: var(--bg-light);
+            padding: 30px;
+            border-left: 5px solid var(--secondary-color);
+            border-radius: 4px;
+        }
+        .main-text h3 {
+            font-size: 24px;
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+        .experience-box h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+        footer {
+            background: #111;
+            color: #bbb;
+            padding: 60px 0 20px;
+            font-size: 15px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 2fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        .footer-col ul li a {
+            color: #bbb;
+            text-decoration: none;
+        }
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid #222;
+            padding-top: 20px;
+            font-size: 13px;
+        }
+        @media (max-width: 768px) {
+            .about-grid, .footer-grid, header .container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            nav ul {
+                margin-top: 20px;
+                flex-direction: column;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+            nav ul li ul {
+                position: relative;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="container">
+            <div><a href="mailto:sales@highcans.com.my">sales@highcans.com.my</a></div>
+            <div>+603 - 7980 8566</div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>High Cans Corporation <span style="display:inline;">Sdn Bhd</span></h1>
+                <span>A Total Metal Recycling Company (Est. 1993)</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="javascript:void(0);" style="cursor: default;">Corporate Profile</a>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="philosophy.html">Corporate Philosophy</a></li>
+                            <li><a href="values.html">Corporate Values</a></li>
+                            <li><a href="commitment.html">Quality Commitment</a></li>
+                            <li><a href="environment.html">Environment</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" style="cursor: default;">Services</a>
+                        <ul>
+                            <li><a href="ferrous.html">Ferrous Recycling</a></li>
+                            <li><a href="non-ferrous.html">Non-Ferrous Recycling</a></li>
+                            <li><a href="demolition.html">Demolition Services</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-banner">
+        <div class="container">
+            <h2>About Us</h2>
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a> &gt; Corporate Profile &gt; About Us
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="main-text">
+                    <span style="color:var(--secondary-color); font-weight:bold; text-transform:uppercase;">Corporate Profile</span>
+                    <h3>High Cans Corporation Sdn Bhd</h3>
+                    <p>High Cans Corporation Sdn Bhd is a consolidated scrap metal dealer and a metal recycler, operating both yard and warehouse operations from its 50,000 sq feet facility in Sungai Besi, Kuala Lumpur, Malaysia. Our facility is one of the largest in the district. We began business in 1993, and have since grown to become a scrap metal recycling industry leader in Malaysia.</p>
+                    <p>We are now <strong>ISO 9001:2008 Certified by Bureau Veritas</strong> and are also accredited by the Department of Standards Malaysia. We are one of the major scrap metal suppliers to the Malaysian market with over <strong>RM 300 Million turnover annually</strong>. High Cans Corporation processes large quantities of high quality materials, which are selectively and efficiently packaged into local/overseas containers for delivery according to our customers' specification.</p>
+                    <p>Through years of experience, High Cans Corporation has become well networked throughout Malaysia and the Southeast Asia Regions in order to serve our customers with quality recycled scrap metals at competitive prices. Our sources for scrap metals include other recycling dealers all over Malaysia, industrial accounts (that as a by-product produce scrap metals for recycling), small peddlers, manufacturing facilities, government installations and small service businesses from the surrounding communities such as plumbing and electrical contractors.</p>
+                </div>
+
+                <div class="experience-box">
+                    <h3>A Touch of Experience</h3>
+                    <p>Our staff have many years of experience in the scrap industry with all key employees having over 25 years of experience.</p>
+                    <p>Our Founders, <strong>Dato' Sri Paranthaman, D.I.M.P., A.N.S.</strong> and <strong>Datin K Mayah</strong>, are second-generation scrap dealers who have accumulated more than 29 years of experience in the scrap metal industry.</p>
+                    <p>Our years of experience have taught us how to do business with the Asia, Middle East, Europe, and US markets both effectively and efficiently. Our organization has developed internal procedures that expedite shipping and delivery utilizing our highly efficient Logistics Department.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>About HCC</h4>
+                    <p>High Cans Corporation Sdn Bhd is a consolidated scrap metal dealer and a metal recycler, operating both yard and warehouse operations from its 50,000 sq feet facility in Sungai Besi, Kuala Lumpur, Malaysia.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Reach Us</h4>
+                    <p>
+                        +603 - 7980 8566<br>
+                        +601 - 2366 9861<br>
+                        sales@highcans.com.my<br><br>
+                        <strong>High Cans Corporation Sdn Bhd (464252-K)</strong><br>
+                        No.5, PT 3815, Jln 1/148A, Taman Sungai Besi Industrial Park, 57100 Kuala Lumpur, Malaysia.
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>2019 © All rights reserved by HCC SDN BHD</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

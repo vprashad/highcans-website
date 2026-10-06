@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferrous Recycling | High Cans Corporation Sdn Bhd</title>
+    <style>
+        :root {
+            --primary-color: #1b4d3e;
+            --secondary-color: #cf8a15;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-light: #f9f9f9;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background-color: #222;
+            color: #fff;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .top-bar a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        .logo h1 {
+            margin: 0;
+            font-size: 24px;
+            color: var(--primary-color);
+            line-height: 1.2;
+        }
+        .logo span {
+            font-size: 14px;
+            display: block;
+            color: var(--text-light);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            position: relative;
+            margin-left: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            padding: 10px 0;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        /* Dropdown Menu */
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            min-width: 180px;
+            flex-direction: column;
+            padding: 10px 0;
+        }
+        nav ul li:hover ul {
+            display: flex;
+        }
+        nav ul li ul li {
+            margin: 0;
+        }
+        nav ul li ul li a {
+            padding: 8px 20px;
+            display: block;
+            font-weight: normal;
+        }
+        nav ul li ul li a:hover {
+            background: var(--bg-light);
+        }
+
+        /* Inner Page Banner */
+        .page-banner {
+            background: linear-gradient(rgba(27, 77, 62, 0.9), rgba(27, 77, 62, 0.9));
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
+        .page-banner h2 {
+            font-size: 32px;
+            margin: 0 0 10px 0;
+        }
+        .breadcrumbs {
+            font-size: 14px;
+            color: #ccc;
+        }
+        .breadcrumbs a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Main Split Content Styling */
+        .content-section {
+            padding: 60px 0;
+            background: #fff;
+        }
+        .services-layout {
+            display: flex;
+            gap: 50px;
+        }
+        .services-main {
+            flex: 2;
+        }
+        .services-sidebar {
+            flex: 1;
+        }
+
+        /* Content blocks styling */
+        .intro-lead {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            color: var(--text-dark);
+        }
+        .source-section-title {
+            color: var(--primary-color);
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+        }
+        .source-block {
+            margin-bottom: 25px;
+        }
+        .source-block h4 {
+            color: var(--secondary-color);
+            font-size: 16px;
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+        .source-block p {
+            margin: 0;
+            font-size: 15px;
+            text-align: justify;
+        }
+
+        /* Stats Box Widget */
+        .stats-box {
+            background: var(--bg-light);
+            padding: 30px;
+            border-top: 4px solid var(--primary-color);
+            border-radius: 4px;
+            margin-bottom: 30px;
+        }
+        .stat-item {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .stat-item:last-child {
+            margin-bottom: 0;
+        }
+        .stat-number {
+            display: block;
+            font-size: 36px;
+            font-weight: bold;
+            color: var(--primary-color);
+            line-height: 1.2;
+        }
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Footer styling */
+        footer {
+            background: #111;
+            color: #bbb;
+            padding: 60px 0 20px;
+            font-size: 15px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 2fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        .footer-col ul li a {
+            color: #bbb;
+            text-decoration: none;
+        }
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid #222;
+            padding-top: 20px;
+            font-size: 13px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .services-layout {
+                flex-direction: column;
+            }
+            .footer-grid, header .container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            nav ul {
+                margin-top: 20px;
+                flex-direction: column;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+            nav ul li ul {
+                position: relative;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="container">
+            <div><a href="mailto:sales@highcans.com.my">sales@highcans.com.my</a></div>
+            <div>+603 - 7980 8566</div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>High Cans Corporation <span style="display:inline;">Sdn Bhd</span></h1>
+                <span>A Total Metal Recycling Company Est. 1993</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="javascript:void(0);" style="cursor: default;">Corporate Profile</a>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="philosophy.html">Corporate Philosophy</a></li>
+                            <li><a href="values.html">Corporate Values</a></li>
+                            <li><a href="commitment.html">Quality Commitment</a></li>
+                            <li><a href="environment.html">Environment</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" style="cursor: default;">Services</a>
+                        <ul>
+                            <li><a href="ferrous.html">Ferrous Recycling</a></li>
+                            <li><a href="non-ferrous.html">Non-Ferrous Recycling</a></li>
+                            <li><a href="demolition.html">Demolition Services</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-banner">
+        <div class="container">
+            <h2>Ferrous Recycling</h2>
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a> Services Ferrous Recycling
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="services-layout">
+                
+                <div class="services-main">
+                    <span style="color:var(--secondary-color); font-weight:bold; text-transform:uppercase;">Our Core Services</span>
+                    <h2 style="color:var(--primary-color); margin-top:5px; margin-bottom:15px;">Ferrous Recycling Solutions</h2>
+                    
+                    <p class="intro-lead">We are ready to serve you irrespective of the volume or diversity of recyclable material or how challenging the removal process is. Scrap generators are vital to the entire process of scrap recycling. We prepare the nonferrous scrap metal we purchase from you for resale to our customers for remelting into new metallic products. Your scrap is processed through a variety of methods including sorting, shredding, shearing or cutting, baling, briquetting or chopping.</p>
+                    
+                    <h3 class="source-section-title">We purchase ferrous scrap from several sources</h3>
+                    
+                    <div class="source-block">
+                        <h4>Industrial Scrap</h4>
+                        <p>We collect ferrous scrap from the metal-working industry, metal service centers and other sources by providing in-plant accumulation and retrieval bins and/or truck containers at their facilities. When full, the bins and containers are transported to our processing facilities.</p>
+                    </div>
+
+                    <div class="source-block">
+                        <h4>Obsolete Scrap</h4>
+                        <p>Purchased from auto wreckers, demolition contractors, railroads, buses and others, including anyone's metallic maintenance scrap, and from smaller scrap yards who generate obsolete steel and iron scrap.</p>
+                    </div>
+
+                    <div class="source-block">
+                        <h4>High Cans Corporation Internal Ingestion</h4>
+                        <p>We also purchase scrap generated from our own auto crushing and demolitions jobs and from smaller scrap dealers, peddlers and others who deliver both industrial and obsolete scrap directly to our recycling premises.</p>
+                        <p style="margin-top: 10px;">Prices paid for scrap metals, on a delivered basis, are determined primarily by market demand and the composition, quality, size and weight of the materials. Our substantial investment in processing equipment and an extensive truck fleet ensures the highest level of service.</p>
+                    </div>
+
+                    <div class="source-block">
+                        <h4>Comprehensive Custom Coordination</h4>
+                        <p>High Cans Corporation with suitable facilities has the ability to coordinate all scrap activity for large producers of scrap and improve their net scrap revenue.</p>
+                        <p style="margin-top: 10px;">For expert consultation in material handling to safe, clean and advanced technology at our facilities, please consult High Cans Corporation for leadership in recycling and raw material management for the 21st Century.</p>
+                    </div>
+                </div>
+
+                <div class="services-sidebar">
+                    <div class="stats-box">
+                        <div class="stat-item">
+                            <span class="stat-number">600+</span>
+                            <span class="stat-label">Finishing Projects</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">25+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">800+</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>About HCC</h4>
+                    <p>High Cans Corporation Sdn Bhd is a consolidated scrap metal dealer and a metal recycler, operating both yard and warehouse operations from its 50,000 sq feet facility in Sungai Besi, Kuala Lumpur, Malaysia. Our facility is one of the largest in the district.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Reach Us</h4>
+                    <p>
+                        +603 - 7980 8566<br>
+                        +601 - 2366 9861<br>
+                        sales@highcans.com.my<br><br>
+                        <strong>High Cans Corporation Sdn Bhd 464252-K</strong><br>
+                        No.5, PT 3815, Jln 1/148A,<br>
+                        Taman Sungai Besi Industrial Park,<br>
+                        57100 Kuala Lumpur Malaysia.
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>2019 All rights reserved by HCC SDN BHD</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

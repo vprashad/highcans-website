@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quality Commitment | High Cans Corporation Sdn Bhd</title>
+    <style>
+        :root {
+            --primary-color: #1b4d3e;
+            --secondary-color: #cf8a15;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-light: #f9f9f9;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background-color: #222;
+            color: #fff;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .top-bar a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        .logo h1 {
+            margin: 0;
+            font-size: 24px;
+            color: var(--primary-color);
+            line-height: 1.2;
+        }
+        .logo span {
+            font-size: 14px;
+            display: block;
+            color: var(--text-light);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            position: relative;
+            margin-left: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            padding: 10px 0;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        /* Dropdown Menu */
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            min-width: 180px;
+            flex-direction: column;
+            padding: 10px 0;
+        }
+        nav ul li:hover ul {
+            display: flex;
+        }
+        nav ul li ul li {
+            margin: 0;
+        }
+        nav ul li ul li a {
+            padding: 8px 20px;
+            display: block;
+            font-weight: normal;
+        }
+        nav ul li ul li a:hover {
+            background: var(--bg-light);
+        }
+
+        /* Inner Page Banner */
+        .page-banner {
+            background: linear-gradient(rgba(27, 77, 62, 0.9), rgba(27, 77, 62, 0.9));
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
+        .page-banner h2 {
+            font-size: 32px;
+            margin: 0 0 10px 0;
+        }
+        .breadcrumbs {
+            font-size: 14px;
+            color: #ccc;
+        }
+        .breadcrumbs a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Content Styling */
+        .content-section {
+            padding: 60px 0;
+            background: #fff;
+        }
+        .content-box {
+            max-width: 900px;
+            background: var(--bg-light);
+            padding: 40px;
+            border-left: 4px solid var(--primary-color);
+            border-radius: 4px;
+            margin-top: 30px;
+        }
+        .content-box p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        /* Footer styling */
+        footer {
+            background: #111;
+            color: #bbb;
+            padding: 60px 0 20px;
+            font-size: 15px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 2fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        .footer-col ul li a {
+            color: #bbb;
+            text-decoration: none;
+        }
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid #222;
+            padding-top: 20px;
+            font-size: 13px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .footer-grid, header .container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            nav ul {
+                margin-top: 20px;
+                flex-direction: column;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+            nav ul li ul {
+                position: relative;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Contact Strip -->
+    <div class="top-bar">
+        <div class="container">
+            <div><a href="mailto:sales@highcans.com.my">sales@highcans.com.my</a></div>
+            <div>+603 - 7980 8566</div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>High Cans Corporation <span style="display:inline;">Sdn Bhd</span></h1>
+                <span>A Total Metal Recycling Company Est. 1993</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="javascript:void(0);" style="cursor: default;">Corporate Profile</a>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="philosophy.html">Corporate Philosophy</a></li>
+                            <li><a href="values.html">Corporate Values</a></li>
+                            <li><a href="commitment.html">Quality Commitment</a></li>
+                            <li><a href="environment.html">Environment</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" style="cursor: default;">Services</a>
+                        <ul>
+                            <li><a href="ferrous.html">Ferrous Recycling</a></li>
+                            <li><a href="non-ferrous.html">Non-Ferrous Recycling</a></li>
+                            <li><a href="demolition.html">Demolition Services</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner & Breadcrumbs -->
+    <section class="page-banner">
+        <div class="container">
+            <h2>Quality Commitment</h2>
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a> Corporate Profile Quality Commitment
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="content-section">
+        <div class="container">
+            <span style="color:var(--secondary-color); font-weight:bold; text-transform:uppercase;">Standards and Assurance</span>
+            <h2 style="color:var(--primary-color); margin-top:5px; margin-bottom:10px;">Quality Commitment</h2>
+            
+            <div class="content-box">
+                <p>The rationale for creating High Cans Corporation was to enhance the quality, integrity and scope of services available to industrial scrap generators and consumers. We share a commitment to performance, customer satisfaction and environmental responsibility; we are ISO 9001 and ISO 9002 certified holder for exceptional process control and product quality.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Corporate Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>About HCC</h4>
+                    <p>High Cans Corporation Sdn Bhd is a consolidated scrap metal dealer and a metal recycler, operating both yard and warehouse operations from its 50,000 sq feet facility in Sungai Besi, Kuala Lumpur, Malaysia. Our facility is one of the largest in the district.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Reach Us</h4>
+                    <p>
+                        +603 - 7980 8566<br>
+                        +601 - 2366 9861<br>
+                        sales@highcans.com.my<br><br>
+                        <strong>High Cans Corporation Sdn Bhd 464252-K</strong><br>
+                        No.5, PT 3815, Jln 1/148A,<br>
+                        Taman Sungai Besi Industrial Park,<br>
+                        57100 Kuala Lumpur Malaysia.
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>2019 All rights reserved by HCC SDN BHD</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
